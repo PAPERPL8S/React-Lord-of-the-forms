@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { ErrorMessage } from "../ErrorMessage";
-import { isEmailValid, isCityValid, isPhoneValid } from "../utils/validations.js";
-
+import {
+  isEmailValid,
+  isCityValid,
+  isPhoneValid,
+} from "../utils/validations.js";
 
 const firstNameErrorMessage =
   "First name must be at least 2 characters long and should not contain numbers";
@@ -157,5 +160,39 @@ export const FunctionalForm = () => {
 
       <input type="submit" value="Submit" />
     </form>
+  );
+};
+
+export const FunctionalTextInput = ({
+  label,
+  name,
+  placeholder,
+  value,
+  onChange,
+}) => {
+  return (
+    <div>
+      <label htmlFor={name}>{label}</label>
+      <input
+        type="text"
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+};
+
+export const FunctionalPhoneInput = ({ label, phone, onChange }) => {
+  return (
+    <div>
+      <label>{label}</label>
+      <input type="text" value={phone[0]} onChange={(e) => onChange(e, 0)} />
+      <input type="text" value={phone[1]} onChange={(e) => onChange(e, 1)} />
+      <input type="text" value={phone[2]} onChange={(e) => onChange(e, 2)} />
+      <input type="text" value={phone[3]} onChange={(e) => onChange(e, 3)} />
+    </div>
   );
 };
