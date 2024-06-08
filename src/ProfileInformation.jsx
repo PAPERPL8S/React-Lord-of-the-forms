@@ -43,3 +43,5 @@ export const ProfileInformation = ({ userData }) => {
     </>
   );
 };
+
+export default ProfileInformation;

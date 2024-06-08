@@ -1,6 +1,7 @@
-import { Component } from "react";
-import { ClassForm } from "./ClassForm";
-import { ProfileInformation } from "../ProfileInformation";
+import React, { Component } from "react";
+import ClassForm from "./ClassForm";
+import ProfileInformation from "../ProfileInformation";
+import "../App.css";
 
 const defaultUser = {
   email: "default@default.com",
@@ -10,20 +11,16 @@ const defaultUser = {
   city: "Hobbiton",
 };
 
-export class ClassApp extends Component {
+class ClassApp extends Component {
   render() {
     return (
       <>
         <h2>Class</h2>
-        <ProfileInformation
-          userData={
-            // toggle the following lines to change
-            // null
-            defaultUser
-          }
-        />
+        <ProfileInformation userData={defaultUser} />
         <ClassForm />
       </>
     );
   }
 }
+
+export default ClassApp;

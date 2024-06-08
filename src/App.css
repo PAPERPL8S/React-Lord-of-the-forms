@@ -24,6 +24,7 @@
   background-image: url(./assets/paper-background.jpeg);
   background-repeat: repeat;
 }
+
 h4 {
   font-family: Caligraf;
   font-size: 20;
@@ -32,6 +33,7 @@ h4 {
 h1 {
   margin-bottom: 0;
 }
+
 .left,
 .right {
   flex: 1;
@@ -45,6 +47,7 @@ h1 {
 .left {
   border: 5px solid black;
 }
+
 .right {
   border: 5px solid black;
 }
@@ -55,9 +58,11 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -66,6 +71,7 @@ h1 {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

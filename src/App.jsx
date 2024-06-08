@@ -1,7 +1,7 @@
-import "./App.css";
-import { ClassApp } from "./ClassApp/ClassApp";
+import React from "react";
+import ClassApp from "./ClassApp/ClassApp";
 import { FunctionalApp } from "./FunctionalApp/FunctionalApp";
-import { allCities } from "./utils/all-cities";
+import { allCities } from "./utils/all-cities.js";
 
 function App() {
   return (
